@@ -57,12 +57,14 @@ export class PostService {
 
     elimina(id: number) {
 
-      return fetch("http://localhost:3000/posts" + id, {
+      return fetch("http://localhost:3000/posts/", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(id)
-      });
+      }).then(response => {
+        return response.json( )
+    });
     }
 }

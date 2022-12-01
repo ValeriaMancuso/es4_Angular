@@ -27,8 +27,6 @@ export class ActiveComponent implements OnInit {
   }
 
   eliminaPost(id: number) {
-    this.postSrv.elimina(id).then(() => {
-      this.posts;
-    });
+    this.postSrv.elimina(id);
   }
 }
