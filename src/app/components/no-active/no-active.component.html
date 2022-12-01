@@ -1,0 +1,9 @@
+<div class="container">
+  <div *ngFor="let postIn of posts">
+  <app-post-card [p]="postIn">
+    <button (click)="onActivePost(postIn.id)" class="btn btn-primary">Attiva</button>
+  </app-post-card>
+
+  </div>
+</div>
+
